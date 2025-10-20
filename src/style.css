@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap");
+
+@import "tailwindcss";
+
+body {
+  font-family: "Nunito", "Plus Jakarta Sans", "Poppins",
+    sans-serif;
+}
+.slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
