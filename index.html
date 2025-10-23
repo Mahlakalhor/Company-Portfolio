@@ -44,7 +44,8 @@
         <div
           class="absolute inset-0 flex justify-between items-center px-8 z-20"
         >
-          <svg id="prevBtn"
+          <svg
+            id="prevBtn"
             class="cursor-pointer"
             width="24px"
             height="24px"
@@ -58,7 +59,8 @@
               />
             </g>
           </svg>
-          <svg id="nextBtn"
+          <svg
+            id="nextBtn"
             class="cursor-pointer"
             width="24px"
             height="24px"
@@ -74,7 +76,7 @@
             </g>
           </svg>
         </div>
-        <div class="slide current h-full w-full">
+        <div class="h-full w-full">
           <img
             class="object-cover h-full w-full"
             src="./src/image/slider-1.jpg"
@@ -138,6 +140,409 @@
               GET STARTED
             </button>
           </div>
+        </div>
+      </section>
+      <!-- About -->
+      <section
+        class="flex flex-col gap-10 justify-center items-center p-10 bg-[#f8f9fa]"
+      >
+        <div class="flex flex-col">
+          <span class="text-[32px] text-center font-bold">ABOUT US</span>
+          <span class="text-center font-bold text-3xl">---------</span>
+          <p class="text-center text-[#656565] text-base">
+            Maecenas vel turpis quis lorem aliquam tempus quis non mi.
+            Pellentesque habitant<br />
+            morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas.
+          </p>
+        </div>
+        <div class="flex items-center gap-6 relative">
+          <div class="max-w-[500px] max-h-[257px]">
+            <img
+              src="./src/image/about.jpg"
+              alt="about-image"
+              class="w-[500px] h-[257px] object-cover rounded"
+            />
+          </div>
+          <div class="flex flex-col gap-4">
+            <span
+              class="text-[#20c997] hover:text-black font-bold cursor-pointer text-[32px]"
+              >welcome to Our Site</span
+            >
+            <p class="text-[#656565] text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras<br />
+              condimentum rutrum ligula. Integer ac porttitor mi. In finibus<br />
+              vehicula aliquet. Vestibulum et velit placerat, pretium lorem id,
+              <br />porttitor libero. Suspendisse scelerisque nec arcu a
+              malesuada.<br />
+              Nulla tempus dictum tristique.
+            </p>
+            <button
+              class="bg-[#20c997] text-white hover:bg-[#656565] cursor-pointer w-28 p-1.5"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="flex flex-col bg-white hover:shadow-2xl gap-4 items-center justify-center p-4"
+          >
+            <div class="relative max-w-[289px] max-h-[165px]">
+              <img
+                src="./src/image/about-mission.jpg"
+                alt="about-mission"
+                class="w-[289px] h-[165px] object-cover"
+              />
+
+              <svg
+                class="absolute left-1/2 -translate-x-1/2 -bottom-6 w-16 h-16 rounded-full bg-[#1dbf73] border-2 border-white p-2"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <style>
+                  .st0 {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-width: 2;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-miterlimit: 10;
+                  }
+                </style>
+                <circle class="st0" cx="16" cy="16" r="6" />
+                <path
+                  class="st0"
+                  d="M27,9c1.3,2,2,4.4,2,7c0,7.2-5.8,13-13,13S3,23.2,3,16S8.8,3,16,3c2.6,0,5,0.7,7,2"
+                />
+              </svg>
+            </div>
+
+            <div class="mt-8 text-center">
+              <span class="text-[20px] font-bold block">Our Mission</span>
+              <p class="text-[#353535] leading-6">
+                Aenean volutpat, dolor eu finibus <br />
+                rhoncus, elit felis vehicula nunc, ut <br />
+                pulvinar ex diam nec lacus. Phasellus sit <br />
+                amet rhoncus turpis. Aenean tincidunt <br />
+                auctor purus, ac sodales sapien sagittis
+              </p>
+              <button
+                class="mt-3 bg-[#20c997] text-white hover:bg-[#656565] cursor-pointer w-28 p-1.5"
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col bg-white hover:shadow-2xl gap-4 items-center justify-center p-4"
+          >
+            <div class="relative max-w-[289px] max-h-[165px]">
+              <img
+                src="./src/image/about-vision.jpg"
+                alt="about-mission"
+                class="w-[289px] h-[165px] object-cover"
+              />
+
+              <svg
+                class="absolute left-1/2 -translate-x-1/2 -bottom-6 w-16 h-16 rounded-full bg-[#1dbf73] border-2 border-white p-2"
+                width="800px"
+                height="800px"
+                viewBox="0 0 20 20"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="layer1">
+                  <path
+                    d="M 9.6269531 5.0039062 L 8.8789062 5.0488281 L 8.1367188 5.1386719 L 7.4003906 5.2714844 L 6.6757812 5.4511719 L 5.9609375 5.6699219 L 5.2617188 5.9316406 L 4.578125 6.2363281 L 3.9140625 6.5820312 L 3.2714844 6.9628906 L 2.6542969 7.3867188 L 2.0625 7.8417969 L 1.4980469 8.3339844 L 0.96679688 8.859375 L 0.46679688 9.4140625 L 0 9.9980469 L 0.46679688 10.583984 L 0.96679688 11.140625 L 1.4980469 11.664062 L 2.0625 12.15625 L 2.6542969 12.613281 L 3.2714844 13.033203 L 3.9140625 13.417969 L 4.578125 13.761719 L 5.2617188 14.066406 L 5.9609375 14.328125 L 6.6757812 14.548828 L 7.4003906 14.726562 L 8.1367188 14.861328 L 8.8789062 14.949219 L 9.6269531 14.992188 L 10.373047 14.992188 L 11.119141 14.949219 L 11.863281 14.861328 L 12.599609 14.726562 L 13.324219 14.548828 L 14.039062 14.328125 L 14.738281 14.066406 L 15.421875 13.761719 L 16.085938 13.417969 L 16.726562 13.033203 L 17.345703 12.613281 L 17.9375 12.15625 L 18.501953 11.664062 L 19.033203 11.140625 L 19.533203 10.583984 L 20 9.9980469 L 19.533203 9.4140625 L 19.033203 8.859375 L 18.501953 8.3339844 L 17.9375 7.8417969 L 17.345703 7.3867188 L 16.726562 6.9628906 L 16.085938 6.5820312 L 15.421875 6.2363281 L 14.738281 5.9316406 L 14.039062 5.6699219 L 13.324219 5.4511719 L 12.599609 5.2714844 L 11.863281 5.1386719 L 11.119141 5.0488281 L 10.373047 5.0039062 L 9.6269531 5.0039062 z M 9.8945312 6.0019531 L 10.318359 6.0117188 L 10.740234 6.0683594 L 11.154297 6.1699219 L 11.554688 6.3144531 L 11.939453 6.5019531 L 12.298828 6.7265625 L 12.634766 6.9882812 L 12.939453 7.2851562 L 13.210938 7.6132812 L 13.445312 7.96875 L 13.640625 8.3476562 L 13.796875 8.7441406 L 13.910156 9.1542969 L 13.978516 9.5742188 L 14.001953 9.9980469 L 13.978516 10.425781 L 13.910156 10.845703 L 13.796875 11.255859 L 13.640625 11.652344 L 13.445312 12.029297 L 13.210938 12.384766 L 12.939453 12.712891 L 12.634766 13.009766 L 12.298828 13.273438 L 11.939453 13.498047 L 11.554688 13.685547 L 11.154297 13.828125 L 10.740234 13.929688 L 10.318359 13.986328 L 9.8945312 13.998047 L 9.46875 13.964844 L 9.0507812 13.884766 L 8.6425781 13.763672 L 8.25 13.597656 L 7.8789062 13.390625 L 7.5292969 13.146484 L 7.2089844 12.865234 L 6.9199219 12.552734 L 6.6679688 12.210938 L 6.4511719 11.84375 L 6.2734375 11.455078 L 6.140625 11.052734 L 6.0507812 10.636719 L 6.0058594 10.212891 L 6.0058594 9.7871094 L 6.0507812 9.3632812 L 6.140625 8.9472656 L 6.2734375 8.5429688 L 6.4511719 8.15625 L 6.6679688 7.7871094 L 6.9199219 7.4472656 L 7.2089844 7.1347656 L 7.5292969 6.8515625 L 7.8789062 6.609375 L 8.25 6.4023438 L 8.6425781 6.2363281 L 9.0507812 6.1152344 L 9.46875 6.0351562 L 9.8945312 6.0019531 z M 6.3339844 6.5996094 L 6.0332031 6.9570312 L 5.765625 7.3398438 L 5.5371094 7.7480469 L 5.3457031 8.171875 L 5.1933594 8.6152344 L 5.0859375 9.0703125 L 5.0214844 9.5332031 L 5 9.9980469 L 5.0214844 10.464844 L 5.0859375 10.927734 L 5.1933594 11.384766 L 5.3457031 11.826172 L 5.5371094 12.251953 L 5.765625 12.660156 L 6.0332031 13.042969 L 6.3339844 13.400391 L 5.6914062 13.162109 L 5.0644531 12.886719 L 4.4570312 12.574219 L 3.8652344 12.226562 L 3.2988281 11.84375 L 2.7539062 11.427734 L 2.234375 10.982422 L 1.7421875 10.505859 L 1.28125 9.9980469 L 1.7421875 9.4941406 L 2.234375 9.0175781 L 2.7539062 8.5703125 L 3.2988281 8.1542969 L 3.8652344 7.7734375 L 4.4570312 7.4238281 L 5.0644531 7.1132812 L 5.6914062 6.8378906 L 6.3339844 6.5996094 z M 13.666016 6.5996094 L 14.308594 6.8378906 L 14.933594 7.1132812 L 15.542969 7.4238281 L 16.134766 7.7734375 L 16.701172 8.1542969 L 17.246094 8.5703125 L 17.765625 9.0175781 L 18.255859 9.4941406 L 18.71875 9.9980469 L 18.255859 10.505859 L 17.765625 10.982422 L 17.246094 11.427734 L 16.701172 11.84375 L 16.134766 12.226562 L 15.542969 12.574219 L 14.933594 12.886719 L 14.308594 13.162109 L 13.666016 13.400391 L 13.966797 13.042969 L 14.234375 12.660156 L 14.462891 12.251953 L 14.654297 11.826172 L 14.804688 11.384766 L 14.914062 10.927734 L 14.978516 10.464844 L 15 9.9980469 L 14.978516 9.5332031 L 14.914062 9.0703125 L 14.804688 8.6152344 L 14.654297 8.171875 L 14.462891 7.7480469 L 14.234375 7.3398438 L 13.966797 6.9570312 L 13.666016 6.5996094 z M 12.117188 8.2519531 L 11.978516 8.2871094 L 11.855469 8.3574219 L 11.757812 8.4609375 L 11.693359 8.5878906 L 11.666016 8.7265625 L 11.677734 8.8691406 L 11.730469 9.0019531 L 11.859375 9.2617188 L 11.945312 9.5390625 L 11.992188 9.8242188 L 11.996094 10.117188 L 11.957031 10.404297 L 11.880859 10.683594 L 11.759766 10.949219 L 11.605469 11.195312 L 11.414062 11.414062 L 11.195312 11.605469 L 10.949219 11.759766 L 10.683594 11.878906 L 10.404297 11.957031 L 10.117188 11.996094 L 9.8242188 11.992188 L 9.5390625 11.945312 L 9.2617188 11.859375 L 9 11.730469 L 8.8671875 11.677734 L 8.7246094 11.666016 L 8.5859375 11.693359 L 8.4609375 11.757812 L 8.3574219 11.855469 L 8.2851562 11.978516 L 8.2519531 12.117188 L 8.2578125 12.257812 L 8.3046875 12.392578 L 8.3886719 12.511719 L 8.5 12.597656 L 8.8339844 12.765625 L 9.1875 12.886719 L 9.5527344 12.966797 L 9.9257812 12.998047 L 10.298828 12.986328 L 10.667969 12.925781 L 11.027344 12.820312 L 11.369141 12.667969 L 11.689453 12.478516 L 11.984375 12.248047 L 12.25 11.986328 L 12.478516 11.689453 L 12.669922 11.367188 L 12.820312 11.025391 L 12.923828 10.667969 L 12.986328 10.296875 L 12.998047 9.9257812 L 12.966797 9.5527344 L 12.886719 9.1875 L 12.765625 8.8339844 L 12.599609 8.5 L 12.509766 8.3867188 L 12.394531 8.3046875 L 12.259766 8.2578125 L 12.117188 8.2519531 z "
+                    style="
+                      fill: #ffff;
+                      fill-opacity: 1;
+                      stroke: none;
+                      stroke-width: 0px;
+                    "
+                  />
+                </g>
+              </svg>
+            </div>
+
+            <div class="mt-8 text-center">
+              <span class="text-[20px] font-bold block">Our Vision</span>
+              <p class="text-[#353535] leading-6">
+                Aenean volutpat, dolor eu finibus <br />
+                rhoncus, elit felis vehicula nunc, ut <br />
+                pulvinar ex diam nec lacus. Phasellus sit <br />
+                amet rhoncus turpis. Aenean tincidunt <br />
+                auctor purus, ac sodales sapien sagittis
+              </p>
+              <button
+                class="mt-3 bg-[#20c997] text-white hover:bg-[#656565] cursor-pointer w-28 p-1.5"
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col bg-white hover:shadow-2xl gap-4 items-center justify-center p-4"
+          >
+            <div class="relative max-w-[289px] max-h-[165px]">
+              <img
+                src="./src/image/about-objective.jpg"
+                alt="about-mission"
+                class="w-[289px] h-[165px] object-cover"
+              />
+
+              <svg
+                class="absolute left-1/2 -translate-x-1/2 -bottom-6 w-16 h-16 rounded-full fill-white bg-[#1dbf73] border-2 border-white p-2"
+                width="512px"
+                height="512px"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>ionicons-v5-i</title>
+                <path
+                  d="M64,144H290.75a48,48,0,0,0,90.5,0H448a16,16,0,0,0,0-32H381.25a48,48,0,0,0-90.5,0H64a16,16,0,0,0,0,32Z"
+                />
+                <path
+                  d="M448,368H381.25a48,48,0,0,0-90.5,0H64a16,16,0,0,0,0,32H290.75a48,48,0,0,0,90.5,0H448a16,16,0,0,0,0-32Z"
+                />
+                <path
+                  d="M448,240H221.25a48,48,0,0,0-90.5,0H64a16,16,0,0,0,0,32h66.75a48,48,0,0,0,90.5,0H448a16,16,0,0,0,0-32Z"
+                />
+              </svg>
+            </div>
+
+            <div class="mt-8 text-center">
+              <span class="text-[20px] font-bold block">Our Objective</span>
+              <p class="text-[#353535] leading-6">
+                Aenean volutpat, dolor eu finibus <br />
+                rhoncus, elit felis vehicula nunc, ut <br />
+                pulvinar ex diam nec lacus. Phasellus sit <br />
+                amet rhoncus turpis. Aenean tincidunt <br />
+                auctor purus, ac sodales sapien sagittis
+              </p>
+              <button
+                class="mt-3 bg-[#20c997] text-white hover:bg-[#656565] cursor-pointer w-28 p-1.5"
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Service -->
+      <section class="flex flex-col p-10">
+        <div class="flex flex-col">
+          <span class="text-[32px] text-[#353535] text-center font-bold"
+            >Services</span
+          >
+          <span class="text-center font-bold text-3xl">---------</span>
+          <p class="text-center text-[#656565] text-base">
+            Maecenas vel turpis quis lorem aliquam tempus quis non mi.
+            Pellentesque habitant<br />
+            morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas.
+          </p>
+        </div>
+        <div class="flex flex-col items-center justify-center mt-12">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center"
+          >
+            <div
+              class="flex flex-col justify-center items-center gap-4 max-w-[240px] max-h-[261px]"
+            >
+              <svg
+                width="56px"
+                height="78px"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-[#1dbf73]"
+              >
+                <path
+                  d="M14 11v-9h-12v9h-2v2h16v-2h-2zM10 12h-4v-1h4v1zM13 10h-10v-7h10v7z"
+                ></path>
+              </svg>
+              <span class="text-[#353535] text-[18px] font-semibold"
+                >Web Development</span
+              >
+              <p class="text-[#656565] text-center leading-relaxed">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipisicing elit.<br />
+                Praesentium.
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center gap-4 max-w-[240px] max-h-[261px]"
+            >
+              <svg
+                fill="#1dbf73"
+                width="56px"
+                height="78px"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.25 1.5H1.75A1.25 1.25 0 0 0 .5 2.75v7.5a1.25 1.25 0 0 0 1.25 1.25H6.1v1.75H4v1.25h8v-1.25H9.91V11.5h4.34a1.25 1.25 0 0 0 1.25-1.25v-7.5a1.25 1.25 0 0 0-1.25-1.25zM8.66 13.25H7.35V11.5h1.31zm5.59-3H1.75v-7.5h12.5z"
+                />
+              </svg>
+              <span class="text-[#353535] text-[18px] font-semibold"
+                >Web Design</span
+              >
+              <p class="text-[#656565] text-center leading-relaxed">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipisicing elit.<br />
+                Praesentium.
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center gap-4 max-w-[240px] max-h-[261px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#1dbf73"
+                width="56px"
+                height="78px"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.5 0h-14C3.12 0 2 1.12 2 2.5v19C2 22.88 3.12 24 4.5 24h14c1.38 0 2.5-1.12 2.5-2.5v-19C21 1.12 19.88 0 18.5 0zm-7 23c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm7.5-4H4V3h15v16z"
+                />
+              </svg>
+              <span class="text-[#353535] text-[18px] font-semibold"
+                >App Design</span
+              >
+              <p class="text-[#656565] text-center leading-relaxed">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipisicing elit.<br />
+                Praesentium.
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center gap-4 max-w-[240px] max-h-[261px]"
+            >
+              <svg
+                fill="#1dbf73"
+                width="56px"
+                height="78px"
+                viewBox="0 -8 72 72"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>mobile</title>
+                <path
+                  d="M49.75,0H22.25a4,4,0,0,0-4.16,3.78V52.22A4,4,0,0,0,22.25,56h27.5a4,4,0,0,0,4.16-3.78V3.78A4,4,0,0,0,49.75,0ZM31.6,2.73h8.8a.48.48,0,0,1,.5.46.47.47,0,0,1-.5.45H31.6a.47.47,0,0,1-.5-.45A.48.48,0,0,1,31.6,2.73ZM36,54.11a1.9,1.9,0,1,1,2.08-1.89A2,2,0,0,1,36,54.11ZM51,49H21V6H51Z"
+                />
+              </svg>
+              <span class="text-[#353535] text-[18px] font-semibold"
+                >UI/UX Design</span
+              >
+              <p class="text-[#656565] text-center leading-relaxed">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipisicing elit.<br />
+                Praesentium.
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center gap-4 max-w-[240px] max-h-[261px]"
+            >
+              <svg
+                width="56px"
+                height="78px"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-[#1dbf73]"
+              >
+                <path
+                  d="M14 11v-9h-12v9h-2v2h16v-2h-2zM10 12h-4v-1h4v1zM13 10h-10v-7h10v7z"
+                ></path>
+              </svg>
+              <span class="text-[#353535] text-[18px] font-semibold"
+                >Web Development</span
+              >
+              <p class="text-[#656565] text-center leading-relaxed">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipisicing elit.<br />
+                Praesentium.
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center gap-4 max-w-[240px] max-h-[261px]"
+            >
+              <svg
+                fill="#1dbf73"
+                width="56px"
+                height="78px"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.25 1.5H1.75A1.25 1.25 0 0 0 .5 2.75v7.5a1.25 1.25 0 0 0 1.25 1.25H6.1v1.75H4v1.25h8v-1.25H9.91V11.5h4.34a1.25 1.25 0 0 0 1.25-1.25v-7.5a1.25 1.25 0 0 0-1.25-1.25zM8.66 13.25H7.35V11.5h1.31zm5.59-3H1.75v-7.5h12.5z"
+                />
+              </svg>
+              <span class="text-[#353535] text-[18px] font-semibold"
+                >Web Design</span
+              >
+              <p class="text-[#656565] text-center leading-relaxed">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipisicing elit.<br />
+                Praesentium.
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center gap-4 max-w-[240px] max-h-[261px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#1dbf73"
+                width="56px"
+                height="78px"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.5 0h-14C3.12 0 2 1.12 2 2.5v19C2 22.88 3.12 24 4.5 24h14c1.38 0 2.5-1.12 2.5-2.5v-19C21 1.12 19.88 0 18.5 0zm-7 23c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm7.5-4H4V3h15v16z"
+                />
+              </svg>
+              <span class="text-[#353535] text-[18px] font-semibold"
+                >App Design</span
+              >
+              <p class="text-[#656565] text-center leading-relaxed">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipisicing elit.<br />
+                Praesentium.
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center gap-4 max-w-[240px] max-h-[261px]"
+            >
+              <svg
+                fill="#1dbf73"
+                width="56px"
+                height="78px"
+                viewBox="0 -8 72 72"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>mobile</title>
+                <path
+                  d="M49.75,0H22.25a4,4,0,0,0-4.16,3.78V52.22A4,4,0,0,0,22.25,56h27.5a4,4,0,0,0,4.16-3.78V3.78A4,4,0,0,0,49.75,0ZM31.6,2.73h8.8a.48.48,0,0,1,.5.46.47.47,0,0,1-.5.45H31.6a.47.47,0,0,1-.5-.45A.48.48,0,0,1,31.6,2.73ZM36,54.11a1.9,1.9,0,1,1,2.08-1.89A2,2,0,0,1,36,54.11ZM51,49H21V6H51Z"
+                />
+              </svg>
+              <span class="text-[#353535] text-[18px] font-semibold"
+                >UI/UX Design</span
+              >
+              <p class="text-[#656565] text-center leading-relaxed">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipisicing elit.<br />
+                Praesentium.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- ghesmat sabz rang -->
         </div>
       </section>
     </main>

@@ -1,36 +1,46 @@
 import "./style.css";
-const slidesEl = document.querySelectorAll<HTMLDivElement>(".slide");
-const prevBtnEl = document.getElementById("prevBtn") as HTMLButtonElement;
-const nextBtnEl = document.getElementById("nextBtn") as HTMLButtonElement;
+// const slidesEl = document.querySelectorAll<HTMLDivElement>(".slide");
+// const prevBtnEl = document.getElementById("prevBtn") as HTMLOrSVGElement;
+// const nextBtnEl = document.getElementById("nextBtn") as HTMLOrSVGElement;
 
-slidesEl[0].classList.add("current");
+// // slidesEl.forEach((s, i) => {
+// //   if (i === 0) { s.classList.add("current"); s.classList.remove("hidden"); }
+// //   else { s.classList.add("hidden"); s.classList.remove("current"); }
+// // });
 
-nextBtnEl.addEventListener("click", () => {
-  const current = document.querySelector(".current") as HTMLDivElement;
-  const next = (
-    current.nextElementSibling as HTMLDivElement
-  )?.classList.contains("slide")
-    ? (current.nextElementSibling as HTMLDivElement)
-    : slidesEl[0];
+// // // بعدی
+// // nextBtnEl.addEventListener("click", () => {
+// //   const currentEl = document.querySelector(".current") as HTMLDivElement;
 
-  current.classList.remove("current");
-  current.classList.add("hidden");
+// //   currentEl.classList.remove("current");
+// //   currentEl.classList.add("hidden");
 
-  next.classList.add("current");
-  next.classList.remove("hidden");
-});
+// //   // برو خواهر/برادر بعدی که .slide باشه
+// //   let next = currentEl.nextElementSibling as HTMLElement;
+// //   while (next && !next.classList.contains("slide")) {
+// //     next = next.nextElementSibling as HTMLElement;
+// //   }
 
-prevBtnEl.addEventListener("click", () => {
-  const current = document.querySelector(".current") as HTMLDivElement;
-  const prev = (
-    current.previousElementSibling as HTMLDivElement
-  )?.classList.contains("slide")
-    ? (current.previousElementSibling as HTMLDivElement)
-    : slidesEl[slidesEl.length - 1];
+// //   const nextSlide = (next as HTMLElement) || (slidesEl[0] as HTMLElement);
+// //   nextSlide.classList.remove("hidden");
+// //   nextSlide.classList.add("current");
+// // });
 
-  current.classList.remove("current");
-  current.classList.add("hidden");
+// // // قبلی
+// // prevBtnEl.addEventListener("click", () => {
+// //   const currentEl = document.querySelector(".current") as HTMLDivElement;
 
-  prev.classList.add("current");
-  prev.classList.remove("hidden");
-});
+// //   currentEl.classList.remove("current");
+// //   currentEl.classList.add("hidden");
+
+// //   // برو خواهر/برادر قبلی که .slide باشه
+// //   let prev = currentEl.previousElementSibling as HTMLElement;
+// //   while (prev && !prev.classList.contains("slide")) {
+// //     prev = prev.previousElementSibling as HTMLElement;
+// //   }
+
+// //   const prevSlide =
+// //     (prev as HTMLElement) || (slidesEl[slidesEl.length - 1] as HTMLElement);
+// //   prevSlide.classList.remove("hidden");
+// //   prevSlide.classList.add("current");
+// // });
