@@ -8,12 +8,14 @@
   </head>
   <body class="h-screen">
     <header
-      class="flex justify-between items-center fixed top-0 left-0 right-0 z-50 pt-8"
+      id="main-header"
+      class="flex justify-between items-center fixed top-0 left-0 right-0 z-50 pt-8 bg-transparent"
     >
-      <a class="pl-14 text-[#1dbf73] hover:text-white font-semibold text-4xl"
+      <a
+        class="pl-14 text-[#1dbf73] hover:text-white font-semibold text-4xl mb-6"
         >GO GREEN</a
       >
-      <nav class="pr-14 flex gap-4">
+      <nav class="pr-14 flex items-center mb-6 gap-4">
         <a class="text-[#1dbf73] cursor-pointer text-sm">HOME</a>
         <a class="hover:text-[#1dbf73] text-white cursor-pointer text-sm"
           >ABOUT</a
@@ -28,10 +30,31 @@
           >PRICE</a
         >
         <div>
-          <a class="hover:text-[#1dbf73] text-white cursor-pointer text-sm"
+          <a
+            id="dropdown"
+            class="hover:text-[#1dbf73] text-white cursor-pointer text-sm"
             >DROPDOWN
-            <i class="dicon hover:text-[#1dbf73] ion-md-arrow-dropdown"></i
-          ></a>
+          </a>
+          <div
+            id="dropdown-menu"
+            class="hidden absolute right-20 top-14 mt-2 w-44 bg-white rounded overflow-hidden transition-all duration-300"
+          >
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >Dropdown Menu</a
+            >
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >Dropdown Menu</a
+            >
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >Dropdown Menu</a
+            >
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >Dropdown Menu</a
+            >
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >Dropdown Menu</a
+            >
+          </div>
         </div>
         <a class="hover:text-[#1dbf73] text-white cursor-pointer text-sm"
           >CONTACT</a
@@ -40,50 +63,51 @@
     </header>
     <main>
       <!-- Home -->
-      <section class="h-screen w-screen relative">
+      <section class="h-screen w-screen relative overflow-hidden">
+        
+        <!-- arrows -->
         <div
-          class="absolute inset-0 flex justify-between items-center px-8 z-20"
+          class="absolute inset-0 flex justify-between items-center px-8 z-30"
         >
           <svg
             id="prevBtn"
             class="cursor-pointer"
-            width="24px"
-            height="24px"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <g>
-              <path
-                fill="#9ca3af"
-                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
-              />
-            </g>
+            <path
+              fill="#9ca3af"
+              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+            />
           </svg>
           <svg
             id="nextBtn"
             class="cursor-pointer"
-            width="24px"
-            height="24px"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <rect x="0" fill="none" width="24" height="24" />
-            <g>
-              <path
-                fill="#9ca3af"
-                d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
-              />
-            </g>
+            <path
+              fill="#9ca3af"
+              d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+            />
           </svg>
         </div>
-        <div class="h-full w-full">
+
+        <!-- slide 1 (active) -->
+        <div
+          class="z-20 slide current absolute inset-0 h-full w-full transition-opacity duration-500 ease-in-out opacity-100"
+        >
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full z-0"
             src="./src/image/slider-1.jpg"
           />
-          <div class="absolute inset-0 bg-black/50"></div>
           <div
-            class="absolute inset-0 flex flex-col justify-center gap-10 items-center"
+            class="absolute inset-0 bg-black/50 pointer-events-none z-10"
+          ></div>
+          <div
+            class="absolute inset-0 z-20 flex flex-col justify-center gap-10 items-center"
           >
             <span class="text-white text-6xl font-bold">Web development</span>
             <p class="text-white text-center">
@@ -93,20 +117,26 @@
               aliquet. Vestibulum et velit placerat.
             </p>
             <button
-              class="bg-[#1dbf73] hover:bg-white hover:text-[#1dbf73] cursor-pointer px-7 py-3 w-[193px] text-white text-center text-[18px] font-bold -mt-4"
+              class="bg-[#1dbf73] hover:bg-white hover:text-[#1dbf73] cursor-pointer px-7 py-3 w-[193px] text-white text-[18px] font-bold -mt-4"
             >
               GET STARTED
             </button>
           </div>
         </div>
 
-        <div class="slide h-full w-full hidden">
+        <!-- slide 2 -->
+        <div
+          class="z-10 slide absolute inset-0 h-full w-full transition-opacity duration-500 ease-in-out hidden opacity-0"
+        >
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full z-0"
             src="./src/image/slider-2.jpg"
           />
           <div
-            class="absolute inset-0 flex flex-col justify-center gap-10 items-center"
+            class="absolute inset-0 bg-black/50 pointer-events-none z-10"
+          ></div>
+          <div
+            class="absolute inset-0 z-20 flex flex-col justify-center gap-10 items-center"
           >
             <span class="text-white text-6xl font-bold">App Development</span>
             <p class="text-white text-center">
@@ -116,26 +146,35 @@
               turpis egestas.
             </p>
             <button
-              class="bg-[#1dbf73] hover:bg-white hover:text-[#1dbf73] cursor-pointer px-7 py-3 w-[193px] text-white text-center text-[18px] font-bold -mt-4"
+              class="bg-[#1dbf73] hover:bg-white hover:text-[#1dbf73] cursor-pointer px-7 py-3 w-[193px] text-white text-[18px] font-bold -mt-4"
             >
               GET STARTED
             </button>
           </div>
         </div>
 
-        <div class="slide h-full w-full hidden">
-          <img class="h-full w-full" src="./src/image/slider-2.jpg" />
+        <!-- slide 3 -->
+        <div
+          class="z-10 slide absolute inset-0 h-full w-full transition-opacity duration-500 ease-in-out hidden opacity-0"
+        >
+          <img
+            class="object-cover h-full w-full z-0"
+            src="./src/image/slider-3.jpg"
+          />
           <div
-            class="absolute inset-0 flex flex-col justify-center gap-10 items-center"
+            class="absolute inset-0 bg-black/50 pointer-events-none z-10"
+          ></div>
+          <div
+            class="absolute inset-0 z-20 flex flex-col justify-center gap-10 items-center"
           >
             <span class="text-white text-6xl font-bold">Game Development</span>
             <p class="text-white text-center">
               Aenean volutpat, dolor eu finibus rhoncus, elit felis vehicula
               nunc, ut pulvinar <br />ex diam nec lacus. Phasellus sit amet
-              rhoncus turpis. Aenean tincidunt auctor purus
+              rhoncus turpis.
             </p>
             <button
-              class="bg-[#1dbf73] hover:bg-white hover:text-[#1dbf73] cursor-pointer px-7 py-3 w-[193px] text-white text-center text-[18px] font-bold -mt-4"
+              class="bg-[#1dbf73] hover:bg-white hover:text-[#1dbf73] cursor-pointer px-7 py-3 w-[193px] text-white text-[18px] font-bold -mt-4"
             >
               GET STARTED
             </button>

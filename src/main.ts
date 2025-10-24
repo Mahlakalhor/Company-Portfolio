@@ -1,46 +1,51 @@
 import "./style.css";
-// const slidesEl = document.querySelectorAll<HTMLDivElement>(".slide");
-// const prevBtnEl = document.getElementById("prevBtn") as HTMLOrSVGElement;
-// const nextBtnEl = document.getElementById("nextBtn") as HTMLOrSVGElement;
+const slidesEl = document.querySelectorAll<HTMLDivElement>(".slide");
+const prevBtnEl = document.getElementById("prevBtn") as HTMLOrSVGElement;
+const nextBtnEl = document.getElementById("nextBtn") as HTMLOrSVGElement;
+const dropDownEl = document.getElementById("dropdown") as HTMLElement;
+const dropdownMenuEl = document.getElementById("dropdown-menu") as HTMLElement;
 
-// // slidesEl.forEach((s, i) => {
-// //   if (i === 0) { s.classList.add("current"); s.classList.remove("hidden"); }
-// //   else { s.classList.add("hidden"); s.classList.remove("current"); }
-// // });
+let current = 0;
 
-// // // بعدی
-// // nextBtnEl.addEventListener("click", () => {
-// //   const currentEl = document.querySelector(".current") as HTMLDivElement;
+slidesEl.forEach((el, i) => {
+  if (i === 0) {
+    el.classList.remove("hidden", "opacity-0");
+    el.classList.add("opacity-100", "current");
+  } else {
+    el.classList.add("hidden", "opacity-0");
+    el.classList.remove("opacity-100", "current");
+  }
+});
 
-// //   currentEl.classList.remove("current");
-// //   currentEl.classList.add("hidden");
+function showSlide(index: number) {
+  slidesEl[current].classList.add("hidden", "opacity-0");
+  slidesEl[current].classList.remove("opacity-100", "current");
 
-// //   // برو خواهر/برادر بعدی که .slide باشه
-// //   let next = currentEl.nextElementSibling as HTMLElement;
-// //   while (next && !next.classList.contains("slide")) {
-// //     next = next.nextElementSibling as HTMLElement;
-// //   }
+  current = (index + slidesEl.length) % slidesEl.length;
 
-// //   const nextSlide = (next as HTMLElement) || (slidesEl[0] as HTMLElement);
-// //   nextSlide.classList.remove("hidden");
-// //   nextSlide.classList.add("current");
-// // });
+  slidesEl[current].classList.remove("hidden", "opacity-0");
+  slidesEl[current].classList.add("opacity-100", "current");
+}
 
-// // // قبلی
-// // prevBtnEl.addEventListener("click", () => {
-// //   const currentEl = document.querySelector(".current") as HTMLDivElement;
+nextBtnEl?.addEventListener("click", () => showSlide(current + 1));
+prevBtnEl?.addEventListener("click", () => showSlide(current - 1));
 
-// //   currentEl.classList.remove("current");
-// //   currentEl.classList.add("hidden");
+setInterval(() => showSlide(current + 1), 5000);
 
-// //   // برو خواهر/برادر قبلی که .slide باشه
-// //   let prev = currentEl.previousElementSibling as HTMLElement;
-// //   while (prev && !prev.classList.contains("slide")) {
-// //     prev = prev.previousElementSibling as HTMLElement;
-// //   }
+window.addEventListener("scroll", () => {
+  const header = document.getElementById("main-header") as HTMLElement;
+  if (window.scrollY > 900) {
+    header.style.backgroundColor = "#000000";
+  } else {
+    header.style.backgroundColor = "transparent";
+  }
+});
+if (dropDownEl && dropdownMenuEl) {
+  dropDownEl.addEventListener("mouseenter", () => {
+    dropdownMenuEl.classList.remove("hidden");
+  });
 
-// //   const prevSlide =
-// //     (prev as HTMLElement) || (slidesEl[slidesEl.length - 1] as HTMLElement);
-// //   prevSlide.classList.remove("hidden");
-// //   prevSlide.classList.add("current");
-// // });
+  dropDownEl.addEventListener("mouseleave", () => {
+    dropdownMenuEl.classList.add("hidden");
+  });
+}
