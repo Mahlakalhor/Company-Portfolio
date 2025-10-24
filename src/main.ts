@@ -4,6 +4,8 @@ const prevBtnEl = document.getElementById("prevBtn") as HTMLOrSVGElement;
 const nextBtnEl = document.getElementById("nextBtn") as HTMLOrSVGElement;
 const dropDownEl = document.getElementById("dropdown") as HTMLElement;
 const dropdownMenuEl = document.getElementById("dropdown-menu") as HTMLElement;
+const buttons = document.querySelectorAll("ul li");
+const cards = document.querySelectorAll(".group");
 
 let current = 0;
 
@@ -49,3 +51,52 @@ if (dropDownEl && dropdownMenuEl) {
     dropdownMenuEl.classList.add("hidden");
   });
 }
+function countUp(id: string, target: number): void {
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  let num = 0;
+  const speed = 1;
+
+  const timer = setInterval(() => {
+    num++;
+    el.textContent = num.toString();
+
+    if (num >= target) {
+      clearInterval(timer);
+    }
+  }, speed);
+}
+
+let done = false;
+
+window.addEventListener("scroll", () => {
+  const section = document.getElementById("stats");
+  if (!section) return;
+
+  const rect = section.getBoundingClientRect();
+
+  if (!done && rect.top < window.innerHeight && rect.bottom > 0) {
+    done = true;
+    countUp("staffs", 100);
+    countUp("clients", 200);
+    countUp("completed", 300);
+    countUp("running", 400);
+  }
+});
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const text = btn.textContent?.trim().toLowerCase();
+
+    cards.forEach((card) => {
+      const category = card.querySelector("h4")?.textContent?.trim().toLowerCase();
+
+      if (text === "all" || category?.includes(text!)) {
+        card.classList.remove("hidden");
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+  });
+});
