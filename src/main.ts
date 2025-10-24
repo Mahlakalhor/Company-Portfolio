@@ -32,7 +32,7 @@ function showSlide(index: number) {
 nextBtnEl?.addEventListener("click", () => showSlide(current + 1));
 prevBtnEl?.addEventListener("click", () => showSlide(current - 1));
 
-setInterval(() => showSlide(current + 1), 5000);
+setInterval(() => showSlide(current + 1), 3000);
 
 window.addEventListener("scroll", () => {
   const header = document.getElementById("main-header") as HTMLElement;
